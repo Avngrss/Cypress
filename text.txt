@@ -1,0 +1,3 @@
+//npx cypress open
+/// <reference types="Cypress" />
+specPattern: "cypress/testcases/**/*.cy.{js,jsx,ts,tsx}",
