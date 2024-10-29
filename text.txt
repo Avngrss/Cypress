@@ -1,3 +1,6 @@
 //npx cypress open
 /// <reference types="Cypress" />
 specPattern: "cypress/testcases/**/*.cy.{js,jsx,ts,tsx}",
+Report:
+npm cypress run
+node generate-report.js

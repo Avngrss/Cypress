@@ -1,0 +1,180 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-10-29T18:46:38.291Z",
+    "end": "2024-10-29T18:46:46.645Z",
+    "duration": 8354,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ed6924c8-b96d-4d9d-8465-029c689c70ae",
+      "title": "",
+      "fullFile": "cypress\\e2e\\handlingAlerts.cy.js",
+      "file": "cypress\\e2e\\handlingAlerts.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2d145dfd-742a-46e2-97af-a6a6748447c0",
+          "title": "Alert in Cypress",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Basic Alert",
+              "fullTitle": "Alert in Cypress Basic Alert",
+              "timedOut": null,
+              "duration": 1763,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://the-internet.herokuapp.com/javascript_alerts');\ncy.get(':nth-child(1) > button').click();\ncy.on('window:alert', alertText => {\n  expect(alertText).to.contains('I am a JS Alert');\n});",
+              "err": {},
+              "uuid": "6703440c-95ab-472e-aafe-c39ad2138467",
+              "parentUUID": "2d145dfd-742a-46e2-97af-a6a6748447c0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Basic Confirm",
+              "fullTitle": "Alert in Cypress Basic Confirm",
+              "timedOut": null,
+              "duration": 780,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://the-internet.herokuapp.com/javascript_alerts');\ncy.get(':nth-child(2) > button').click();\ncy.on('window:confirm', acceptConfirm => {\n  expect(acceptConfirm).to.contains('I am a JS Confirm');\n});",
+              "err": {},
+              "uuid": "9b8717bd-acff-4039-83e5-e8d0c00b58a1",
+              "parentUUID": "2d145dfd-742a-46e2-97af-a6a6748447c0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Basic Confirm OK",
+              "fullTitle": "Alert in Cypress Basic Confirm OK",
+              "timedOut": null,
+              "duration": 658,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://the-internet.herokuapp.com/javascript_alerts');\ncy.get(':nth-child(2) > button').click();\ncy.on('window:confirm', acceptConfirm => {\n  expect(acceptConfirm).to.contains('I am a JS Confirm');\n});",
+              "err": {},
+              "uuid": "20d29681-199f-4c4e-ac26-0d37f4a0b0ec",
+              "parentUUID": "2d145dfd-742a-46e2-97af-a6a6748447c0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Basic Confirm Cancel",
+              "fullTitle": "Alert in Cypress Basic Confirm Cancel",
+              "timedOut": null,
+              "duration": 697,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://the-internet.herokuapp.com/javascript_alerts');\ncy.get(':nth-child(2) > button').click();\ncy.on('window:confirm', () => {\n  return false;\n});",
+              "err": {},
+              "uuid": "e5c4fe43-f272-4633-bb24-e5700cc1fb33",
+              "parentUUID": "2d145dfd-742a-46e2-97af-a6a6748447c0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Basic Prompt",
+              "fullTitle": "Alert in Cypress Basic Prompt",
+              "timedOut": null,
+              "duration": 788,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://the-internet.herokuapp.com/javascript_alerts');\ncy.window().then(promptAlert => {\n  //Stub Windows prompt\n  cy.stub(promptAlert, 'prompt').returns(\"Testnig Tutorial\");\n  cy.get(':nth-child(3) > button').click();\n  cy.get('#result').contains('Testnig Tutorial');\n});",
+              "err": {},
+              "uuid": "12e13160-8e3e-49e3-abc1-a91adcdfe5dd",
+              "parentUUID": "2d145dfd-742a-46e2-97af-a6a6748447c0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6703440c-95ab-472e-aafe-c39ad2138467",
+            "9b8717bd-acff-4039-83e5-e8d0c00b58a1",
+            "20d29681-199f-4c4e-ac26-0d37f4a0b0ec",
+            "e5c4fe43-f272-4633-bb24-e5700cc1fb33",
+            "12e13160-8e3e-49e3-abc1-a91adcdfe5dd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4686,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

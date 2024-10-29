@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-10-29T18:47:03.110Z",
+    "end": "2024-10-29T18:47:24.149Z",
+    "duration": 21039,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "53c0f8dd-e8a1-4d1d-97d7-f6e2eb6e37a8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\iframehandling.cy.js",
+      "file": "cypress\\e2e\\iframehandling.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2ac45552-5ef0-4d3f-a12f-e408edee3bb5",
+          "title": "Handling iframe",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate that user can write text inside the area",
+              "fullTitle": "Handling iframe Validate that user can write text inside the area",
+              "timedOut": null,
+              "duration": 17456,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://the-internet.herokuapp.com/iframe');\ncy.get('#mce_0_ifr').then($iframe => {\n  let iframeBody = $iframe.contents().find('body');\n  cy.wrap(iframeBody).clear().type('Cypress tutorial by testing iframe');\n});",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4000ms: `cy.clear()` failed because it requires a valid clearable element.\n\nThe element cleared was:\n\n  > `<body id=\"tinymce\" class=\"mce-content-body mce-content-readonly\" data-id=\"mce_0\" aria-label=\"Rich Text Area. Press ALT-0 for help.\" spellcheck=\"false\" contenteditable=\"false\">...</body>`\n\nA clearable element matches one of the following selectors:\n  'a[href]'\n  'area[href]'\n  'input'\n  'select'\n  'textarea'\n  'button'\n  'iframe'\n  '[tabindex]'\n  '[contenteditable]'\n\nhttps://on.cypress.io/clear",
+                "estack": "CypressError: Timed out retrying after 4000ms: `cy.clear()` failed because it requires a valid clearable element.\n\nThe element cleared was:\n\n  > `<body id=\"tinymce\" class=\"mce-content-body mce-content-readonly\" data-id=\"mce_0\" aria-label=\"Rich Text Area. Press ALT-0 for help.\" spellcheck=\"false\" contenteditable=\"false\">...</body>`\n\nA clearable element matches one of the following selectors:\n  'a[href]'\n  'area[href]'\n  'input'\n  'select'\n  'textarea'\n  'button'\n  'iframe'\n  '[tabindex]'\n  '[contenteditable]'\n\nhttps://on.cypress.io/clear\n    at throwError (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:115695:70)\n    at onReady (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:115719:15)\n    at runAllChecks (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:113164:14)\n    at retryActionability (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:113186:16)\n    at tryCatcher (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise.attempt.Promise.try (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:4315:29)\n    at whenStable (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:143587:68)\n    at <unknown> (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:143528:14)\n    at tryCatcher (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1701:18)\n    at Promise._fulfill (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1645:18)\n    at <unknown> (https://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:5450:46)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/iframehandling.cy.js:9:13)",
+                "diff": null
+              },
+              "uuid": "06dd8f33-9180-4bb8-a62a-f960c6aa7082",
+              "parentUUID": "2ac45552-5ef0-4d3f-a12f-e408edee3bb5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "06dd8f33-9180-4bb8-a62a-f960c6aa7082"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 17456,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

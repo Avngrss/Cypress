@@ -1,0 +1,128 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-10-29T18:46:49.114Z",
+    "end": "2024-10-29T18:47:00.008Z",
+    "duration": 10894,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ae06c967-a3f9-4040-938d-70e51d381f57",
+      "title": "",
+      "fullFile": "cypress\\e2e\\hooks.cy.js",
+      "file": "cypress\\e2e\\hooks.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "74e1c918-1df0-4f97-a27c-dae1d670cca7",
+          "title": "Smoke Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "validate link",
+              "fullTitle": "Smoke Test validate link",
+              "timedOut": null,
+              "duration": 3250,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#item_4_title_link > div\").click();",
+              "err": {},
+              "uuid": "11d2489e-4f12-49c6-9c7f-3955225bfb1d",
+              "parentUUID": "74e1c918-1df0-4f97-a27c-dae1d670cca7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validate add to cart",
+              "fullTitle": "Smoke Test validate add to cart",
+              "timedOut": null,
+              "duration": 197,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#add-to-cart-sauce-labs-backpack\").click();",
+              "err": {
+                "message": "CypressError: `cy.click()` failed because it requires a DOM element.\n\nNo elements in the current DOM matched your query:\n\n  > cy.get(#react-burger-menu-btn)\n\nBecause this error occurred during a `after each` hook we are skipping the remaining tests in the current suite: `Smoke Test`",
+                "estack": "CypressError: `cy.click()` failed because it requires a DOM element.\n\nNo elements in the current DOM matched your query:\n\n  > cy.get(#react-burger-menu-btn)\n\nBecause this error occurred during a `after each` hook we are skipping the remaining tests in the current suite: `Smoke Test`\n    at isElement (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:144836:62)\n    at validateType (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:144694:14)\n    at Object.isType (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:144725:7)\n    at $Cy.pushSubject (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:138377:22)\n    at wrapped (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:137934:19)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/hooks.cy.js:20:41)",
+                "diff": null
+              },
+              "uuid": "ad5d62b6-15a5-4de7-8aa3-93b7dea140bc",
+              "parentUUID": "74e1c918-1df0-4f97-a27c-dae1d670cca7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "11d2489e-4f12-49c6-9c7f-3955225bfb1d"
+          ],
+          "failures": [
+            "ad5d62b6-15a5-4de7-8aa3-93b7dea140bc"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 3447,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

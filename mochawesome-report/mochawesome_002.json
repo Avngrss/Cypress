@@ -1,0 +1,104 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-10-29T18:46:17.368Z",
+    "end": "2024-10-29T18:46:23.817Z",
+    "duration": 6449,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2487997a-762e-47d6-9a5f-9c9b0b6d822b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\expectAssertion.cy.js",
+      "file": "cypress\\e2e\\expectAssertion.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7a0090e8-2fa6-4642-8337-1fc240618038",
+          "title": "Learn BDD Explicit Assertion",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate complex Data using expect",
+              "fullTitle": "Learn BDD Explicit Assertion Validate complex Data using expect",
+              "timedOut": null,
+              "duration": 3236,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('www.google.com');\n//Simple String Verification\nlet pageName = 'Google Homepage';\nexpect(pageName).to.not.equal('Google');\nexpect(pageName).to.be.equal('Google Homepage');\nexpect(pageName).to.be.a('string');\nexpect(pageName).to.have.length.of.most(15);\n//Validation Object\nlet person = {\n  firstName: 'Testing',\n  lastName: 'Funda'\n};\nexpect(person).to.deep.equal({\n  firstName: 'Testing',\n  lastName: 'Funda'\n});\nexpect(person).to.have.property('firstName');\n//Validate Array\nlet employeeID = [1, 2, 3, 4, 5];\nexpect(employeeID).to.have.ordered.members([1, 2, 3, 4, 5]);\nexpect(employeeID).to.include(2);",
+              "err": {},
+              "uuid": "ba98de4c-fafa-4eca-b920-30b7306cc8e1",
+              "parentUUID": "7a0090e8-2fa6-4642-8337-1fc240618038",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ba98de4c-fafa-4eca-b920-30b7306cc8e1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3236,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
